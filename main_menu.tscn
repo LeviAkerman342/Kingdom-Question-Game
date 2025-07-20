@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqn8klafopiu0"]
+
+[ext_resource type="Texture2D" uid="uid://dstgc1uf41h4o" path="res://367876bae284d72b3bd74ffa1e4346d7.jpg" id="1_t2sly"]
+[ext_resource type="Script" path="res://New_game.gd" id="2_bitru"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqtmx"]
+texture = ExtResource("1_t2sly")
+modulate_color = Color(0.627451, 0.627451, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h8snh"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 402.0
+offset_top = 164.0
+offset_right = 402.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hqtmx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -50.5
+offset_right = 47.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_h8snh")
+text = "Начало"
+script = ExtResource("2_bitru")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_h8snh")
+text = "Создатели"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_h8snh")
+text = "Выйти"
